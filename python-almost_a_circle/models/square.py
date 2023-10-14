@@ -12,3 +12,12 @@ class Square(Rectangle):
     def __str__(self):
         """overloading method """
         return f'[Square] ({self.id}) {self.x}/{self.y} - {self.height}'
+
+    @property
+    def size(self):
+        return self.height
+
+    @size.setter
+    def size(self, size):
+        self.width = size
+        self.height = size
