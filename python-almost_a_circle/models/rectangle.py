@@ -96,3 +96,11 @@ class Rectangle(Base):
         """overriding method"""
         return f"[Rectangle] ({self.id}) {self.__x}\
 /{self.__y} - {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """ assigns an argument to each attribute"""
+        attrs = ['id', 'width', 'height', 'x', 'y']
+
+        for i in range(len(args)):
+            if i < len(attrs):
+                setattr(self, attrs[i], args[i])
